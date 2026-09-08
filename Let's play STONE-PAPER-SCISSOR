@@ -1,0 +1,13 @@
+import random
+choices=["stone","paper","scissor"]
+print("Let's play STONE-PAPER-SCISSOR")
+choice_1=input("Enter your choice (stone,paper,scissor):")
+choice_2=random.choice(choices)
+if choice_1==choice_2:
+    print("It's a draw")
+elif (choice_1=="stone" and choice_2=="scissor") or \
+     (choice_1=="scissor" and choice_2=="paper") or\
+     (choice_1=="paper" and choice_2=="stone"):
+    print("You Win")
+else:
+    print("Computer wins") 
