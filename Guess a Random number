@@ -1,0 +1,18 @@
+import random
+computer=random.randint(1,100)
+attempts=0
+user_input=None
+while  True  :
+    try:
+        user_input=int(input("Guess a random number:"))
+        attempts +=1
+        if user_input > computer:
+            print("Too High !")
+        elif user_input < computer:
+            print("Too Low !")
+        else:
+            print(f"Congratulations! You guessed the number in {attempts} attempts.")
+            break
+        
+    except ValueError:
+        print("Invalid input.Please enter the number.")
